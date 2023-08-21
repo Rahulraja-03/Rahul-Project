@@ -1,0 +1,111 @@
+
+<style>
+.background{
+       position:fixed;
+       background-color:rgb(201 147 215);
+       width:100%;
+       height:750px;
+}
+.log1{  
+  background-color:white;
+      width:95%;
+      height:600px;
+      padding:10px;
+      margin-top:80px;
+      margin-left:35px;
+}
+.log-img{
+      width:100%;
+      height:500px;
+      border-bottom-left-radius:50%;
+      border-top-left-radius:50%;
+}
+.box{
+  background-color: white;
+  width:35%;
+  height:500px;
+  margin-left:40px;
+  margin-top:30px;
+  padding:40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.btn1{
+    color:blueviolet;
+    font-family:arial black;
+    margin-left:50px;
+    text-decoration: underline;
+    font-size:16px;
+}
+.btn2{
+    color:blueviolet;
+    font-family:arial black;
+    margin-left:10px;
+    text-decoration: underline;
+    font-size:16px;
+    margin-top:-5px;
+    margin-left:90px;
+}
+
+
+.s1{
+    position:relative;
+    top:-15px;
+    color:rgb(185, 186, 187)
+}
+.in1{
+     width:95%;
+     height:40px;
+     border-radius:5px;
+     padding-left:20px;
+     border-color:rgb(165, 162, 162);
+}
+.rm{
+     color:rgb(185, 186, 187);
+     margin-top:-25px;
+     margin-left:30px;
+
+}
+.btn3{
+     width: 95%;
+    background:blueviolet;
+    color:white;
+    font-family:arial black;
+}
+.btn4{
+     margin-top:20px;
+     width:45%;
+     border: 3px solid;
+     border-color:rgb(255, 17, 0,80%);
+     color:rgb(255, 17, 0,80%);
+}
+.btn5{
+    width:45%;
+    margin-top:20px;
+    float:right;
+    margin-right:20px;
+    border:solid  blue ;
+    color:blue;
+}
+  </style>
+  <body class="background">
+    <div class="log1">
+       <div class="container-fluid ">
+        <div class="row">
+          <div class="col-md-5 box">
+              <p class="h3">Login</p>
+              <p class="s1">Doesn't have an account yet?<a class="btn1" mat-button>Sign up</a></p>
+              <p class="h6">Email Address</p> 
+             <input class="in1" mat-input placeholder="you@example.com">  
+             <p class="h6" type="password" style = "margin-top:12px;" >Password<a class="btn2" mat-button>forgot password?</a></p> 
+             <input class="in1" style="margin-top:-12px;"mat-input placeholder="Enter 6 character or more"> <br> 
+              <input type="checkbox" style="margin-top:25px;"><p class="rm">Remember me</p>
+            <button class="btn3" mat-raised-button> LOGIN</button>
+            <button class="btn4" mat-button> Google</button>
+            <button class="btn5" mat-button> facebook</button>
+            </div>
+          <div class="col-md-7">
+               <img class="log-img"  src="https://as2.ftcdn.net/v2/jpg/03/45/57/85/1000_F_345578598_CxAHqzx7YHXNAKgXD4yjuig7mJrj45U6.jpg"/>
+          </div>     
+       </div>     
+       </div>
+      </div>
+  </body>
