@@ -1,0 +1,195 @@
+ <!--ngFor EXAMPLES-->
+ 
+ <!--<h1>{{title}}</h1>
+<ul>
+    <li *ngFor='let movie of movies'>
+        {{movie}}
+    </li>
+</ul>-->
+
+<!--ngFor Tables-->
+ <!--<div class="container-fluid panel pannel-primary">
+    <h1 class="panel-heading">
+        {{title}}
+    </h1>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Serial No.</th>
+                            <th>Name</th>
+                            <th>Director</th>
+                            <th>Type</th>
+                            <th>ReleaseDate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr [ngClass]='{"bg-light":o,"back1":e, "bg-primary":f,"last2":l}'
+                        *ngFor="let movie of movies; let i=index; let f=first;let l=last; let o=odd; let e=even;">
+                            <td>{{i+1}}</td>
+                            <td>{{movie.name}}</td>
+                            <td>{{movie.director}}</td>
+                            <td>{{movie.type}}</td>
+                            <td>{{movie.release}}</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>-->
+<!--ngSwith examples
+<div >
+   <input type="text" [(ngModel)]="num">
+   <div [ngSwitch]="num">
+        <div *ngSwitchCase="1" >This is first page</div>
+        <div *ngSwitchCase="2" >This is second page</div>
+        <div *ngSwitchCase="3" >This is third page</div>
+        <div *ngSwitchCase="4" >This is last page</div>
+   </div>
+</div>-->
+
+   <!--ngIf examples
+     <div  >
+        <label> checkBox<input type="checkbox" [(ngModel)]="showMe"></label>
+     </div>
+     <div *ngIf="showMe; then thenBlock; else elseBlock;">
+ 
+     </div>
+     <ng-template #thenBlock>
+             It is Checked. 
+     </ng-template>
+     <ng-template #elseBlock>
+             It is UnChecked. 
+     </ng-template>  -->
+
+
+<!--ngIf examples 
+
+<div>
+    
+        <mat-label>COLOR<input type="checkbox" [(ngModel)]="enableRed"></mat-label>&nbsp;&nbsp;
+        <mat-label>BIG<input type="checkbox" [(ngModel)]="enableBig"></mat-label>&nbsp;&nbsp;
+         <mat-label>STYLE<input type="checkbox" [(ngModel)]="enableItalics"></mat-label>
+    
+    <div [ngClass]="{
+    'color1':enableRed,
+    'big1':enableBig,
+    'italics1':enableItalics,
+              }">
+     Click checkbox then Change text appearance and behavior.
+    </div>
+
+</div>-->
+
+
+<!--ngStyle examples
+<div>
+    Bg-color<input type="text" [(ngModel)]="bgcolorattr">
+    color<input type="text" [(ngModel)]="colorattr">
+    <div [ngStyle]="{'background-color':bgcolorattr,'color':colorattr,'text-align':'center','width':'50%','margin':'40px'}">If we change the input then we change the color</div>
+</div>-->
+
+<!--sharing one component to other component (input)
+<h1>First component</h1>
+<form action="">
+    <input type="text" name="carname" [(ngModel)]="carName">
+    <button mat-button class="bg-primary" (click)="addCar()">submit</button>
+</form>
+<br><br>
+<app-example2 [carsInput]="cars"></app-example2>-->
+
+<!--form creation with ng template driven method-->
+<div class="container"  >
+<div class="row">
+    <div class="col-lg-6" >
+    <div [ngStyle]="{'margin-top': '30px','width': '75%',height:'auto','padding':'30px','background-color':bgcolor1,'opacity':opacity}">
+    <form >
+    <h3 [ngStyle]="{'text-align': center, 'margin-bottom':'50px','color':color1,'font-family':selected}">Template Triven</h3>
+    <p>
+        <label [ngStyle]="{'text-align': left,'color':color1,'font-family':selected,'font-size':size1}">First Name:</label>
+        <input [ngStyle]="{'float': right}" mat-input type="text" >
+    </p>
+    <p>
+        <label [ngStyle]="{'text-align': left,'color':color1,'font-family':selected,'font-size':size1}">Second Name:</label>
+        <input [ngStyle]="{'float': right}" mat-input type="text" >
+    </p>
+    <p>
+        <label [ngStyle]="{'text-align': left,'color':color1,'font-family':selected,'font-size':size1}">Email:</label>
+        <input [ngStyle]="{'float': right}" mat-input type="email" >
+    </p>
+    <p>
+        <label [ngStyle]="{'text-align': left,'color':color1,'font-family':selected,'font-size':size1}">Gender:</label>
+        <mat-radio-group [ngStyle]="{'float': right}" name="Gender">
+            <mat-radio-button class="primary" value="Male"  ><span [ngStyle]="{'color':color1,'font-family':selected,'font-size':size1}">Male</span></mat-radio-button>
+            &nbsp; &nbsp; &nbsp;
+            <mat-radio-button value="Female"><span [ngStyle]="{'color':color1,'font-family':selected,'font-size':size1}">Female</span></mat-radio-button>
+          </mat-radio-group>
+    </p>
+    <p>
+        <label [ngStyle]="{'text-align': left,'color':color1,'font-family':selected,'font-size':size1}">Married:</label>
+        <input [ngStyle]="{'margin-left': '100px'}" mat-input type="checkbox" >
+    </p>
+    <p>
+        <label [ngStyle]="{'text-align': left,'color':color1,'font-family':selected,'font-size':size1}">Contry:</label>
+        <select class="form-select"  [ngStyle]="{'float': right,'width':'57%','height':'30px'}" >
+            <option>none</option>
+            <option>India</option>
+            <option>America</option>
+            <option>Russia</option>
+            <option>China</option>
+          </select>
+    </p> 
+    <div [ngStyle]="{'text-align': center}" >
+    <button [ngStyle]="{'text-align': center,'margin-top':'30px','width':'60%','background-color':btncolor,'color':btntxtcolor,'font-family':selected,'font-size':size1}" mat-raised-button>Submit</button>
+    </div>
+</form>
+</div>
+</div>
+<div class="col-lg-6" style="padding: 30px;margin-top: 30px; background-color:rgba(3, 0, 0, 0.458);">
+<h3 style="text-align: center;">Editor Template</h3>
+<p>
+<label [ngStyle]="{'text-align': left}">change the background color</label>
+<input type="color"  value="#CCCCCC" [ngStyle]="{'float': right}"[(ngModel)]="bgcolor1" title="Choose a color">
+<input type="text"[ngStyle]="{'float': right}" [(ngModel)]="bgcolor1" >
+</p>
+<p>
+<label [ngStyle]="{'text-align': left}">change the text color</label>
+<input type="color"  value="#CCCCCC" [ngStyle]="{'float': right}"[(ngModel)]="color1" title="Choose a color">
+<input type="text"[ngStyle]="{'float': right}" [(ngModel)]="color1" >
+</p>
+<p>
+    <label [ngStyle]="{'text-align': left}">change the button color</label>
+    <input type="color"  value="#CCCCCC" [ngStyle]="{'float': right}"[(ngModel)]="btncolor" title="Choose a color">
+    <input type="text"[ngStyle]="{'float': right}" [(ngModel)]="btncolor" >    
+</p>
+<p>
+    <label [ngStyle]="{'text-align': left}">change the button text color</label>
+    <input type="color"  value="#CCCCCC" [ngStyle]="{'float': right}"[(ngModel)]="btntxtcolor" title="Choose a color">
+    <input type="text"[ngStyle]="{'float': right}" [(ngModel)]="btntxtcolor" >    
+</p>
+<p>
+    <label [ngStyle]="{'text-align': left}">change the  text font family</label>
+    <select class="form-select" value="selected" [(ngModel)]=" selected" [ngStyle]="{'float': right,'width':'57%','height':'30px'}" >
+        <option>none</option>
+        <option>arial black</option>
+        <option>arial</option>
+        <option>monospace</option>
+        <option>fantasy</option>
+      </select>
+       
+</p>
+<p>
+    <label [ngStyle]="{'text-align': left}">change the  text font family</label>
+    <select class="form-select" value="size1" [(ngModel)]=" size1" [ngStyle]="{'float': right,'width':'57%','height':'30px'}" >
+        <option>none</option>
+        <option>15px</option>
+        <option>20px</option>
+        <option>25px</option>
+        <option>30px</option>
+      </select>
+       
+</p>
+</div>
+</div>
+</div>
